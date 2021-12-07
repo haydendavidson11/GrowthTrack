@@ -39,6 +39,8 @@ class DataController : ObservableObject {
     }()
     
     
+    
+    // Create Sample Data
     func createSampleData() throws {
         let viewContext = container.viewContext
         
@@ -72,6 +74,7 @@ class DataController : ObservableObject {
         container.viewContext.delete(object)
     }
     
+    // Delete all project and items in the Context 
     func deleteAll() {
         let fetchRequest1: NSFetchRequest<NSFetchRequestResult> = Item.fetchRequest()
         let batchDeleteRequest1 = NSBatchDeleteRequest(fetchRequest: fetchRequest1)
