@@ -16,6 +16,14 @@
 		97BED150275FAB9200035929 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BED14F275FAB9200035929 /* CloudKit.framework */; };
 		97BED152275FB1FD00035929 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BED151275FB1FD00035929 /* HomeView.swift */; };
 		97BED154275FB43700035929 /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BED153275FB43700035929 /* ProjectsView.swift */; };
+		97BED156275FD87100035929 /* Item-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BED155275FD87100035929 /* Item-CoreDataHelpers.swift */; };
+		97BED158275FDACD00035929 /* Project-CoreDateHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BED157275FDACD00035929 /* Project-CoreDateHelpers.swift */; };
+		97BED15A27600D5F00035929 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BED15927600D5F00035929 /* EditItemView.swift */; };
+		97BED15C2760138A00035929 /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BED15B2760138A00035929 /* ItemRowView.swift */; };
+		97BED15E2760FFDD00035929 /* Binding-OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BED15D2760FFDD00035929 /* Binding-OnChange.swift */; };
+		97BED1602761072C00035929 /* ProjectHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BED15F2761072C00035929 /* ProjectHeaderView.swift */; };
+		97BED16227610B1500035929 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97BED16127610B1500035929 /* Colors.xcassets */; };
+		97BED16427610C6000035929 /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BED16327610C6000035929 /* EditProjectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +39,14 @@
 		97BED14F275FAB9200035929 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		97BED151275FB1FD00035929 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		97BED153275FB43700035929 /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
+		97BED155275FD87100035929 /* Item-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item-CoreDataHelpers.swift"; sourceTree = "<group>"; };
+		97BED157275FDACD00035929 /* Project-CoreDateHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project-CoreDateHelpers.swift"; sourceTree = "<group>"; };
+		97BED15927600D5F00035929 /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
+		97BED15B2760138A00035929 /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
+		97BED15D2760FFDD00035929 /* Binding-OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnChange.swift"; sourceTree = "<group>"; };
+		97BED15F2761072C00035929 /* ProjectHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHeaderView.swift; sourceTree = "<group>"; };
+		97BED16127610B1500035929 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		97BED16327610C6000035929 /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,9 +86,17 @@
 				97634F6C275E625B00F9D382 /* GrowthTrackApp.swift */,
 				97BED151275FB1FD00035929 /* HomeView.swift */,
 				97BED153275FB43700035929 /* ProjectsView.swift */,
+				97BED15D2760FFDD00035929 /* Binding-OnChange.swift */,
+				97BED15B2760138A00035929 /* ItemRowView.swift */,
 				97634F6E275E625B00F9D382 /* ContentView.swift */,
+				97BED15927600D5F00035929 /* EditItemView.swift */,
+				97BED15F2761072C00035929 /* ProjectHeaderView.swift */,
+				97BED16327610C6000035929 /* EditProjectView.swift */,
+				97BED155275FD87100035929 /* Item-CoreDataHelpers.swift */,
+				97BED157275FDACD00035929 /* Project-CoreDateHelpers.swift */,
 				97634F7D275E67F600F9D382 /* DataController.swift */,
 				97634F70275E625B00F9D382 /* Assets.xcassets */,
+				97BED16127610B1500035929 /* Colors.xcassets */,
 				97634F7A275E65F800F9D382 /* Main.xcdatamodeld */,
 				97634F72275E625B00F9D382 /* Preview Content */,
 			);
@@ -153,6 +177,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97BED16227610B1500035929 /* Colors.xcassets in Resources */,
 				97634F74275E625B00F9D382 /* Preview Assets.xcassets in Resources */,
 				97634F71275E625B00F9D382 /* Assets.xcassets in Resources */,
 			);
@@ -166,11 +191,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				97BED154275FB43700035929 /* ProjectsView.swift in Sources */,
+				97BED1602761072C00035929 /* ProjectHeaderView.swift in Sources */,
 				97634F7C275E65F800F9D382 /* Main.xcdatamodeld in Sources */,
 				97634F7E275E67F600F9D382 /* DataController.swift in Sources */,
+				97BED16427610C6000035929 /* EditProjectView.swift in Sources */,
 				97634F6F275E625B00F9D382 /* ContentView.swift in Sources */,
+				97BED15C2760138A00035929 /* ItemRowView.swift in Sources */,
 				97BED152275FB1FD00035929 /* HomeView.swift in Sources */,
+				97BED15E2760FFDD00035929 /* Binding-OnChange.swift in Sources */,
 				97634F6D275E625B00F9D382 /* GrowthTrackApp.swift in Sources */,
+				97BED158275FDACD00035929 /* Project-CoreDateHelpers.swift in Sources */,
+				97BED156275FD87100035929 /* Item-CoreDataHelpers.swift in Sources */,
+				97BED15A27600D5F00035929 /* EditItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
