@@ -26,8 +26,39 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "97634F68275E625B00F9D382"
+            BuildableName = "GrowthTrack.app"
+            BlueprintName = "GrowthTrack"
+            ReferencedContainer = "container:GrowthTrack.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9732D58727B2EA73005B84F1"
+               BuildableName = "GrowthTrackUITests.xctest"
+               BlueprintName = "GrowthTrackUITests"
+               ReferencedContainer = "container:GrowthTrack.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9732D59A27B2EFD3005B84F1"
+               BuildableName = "GrowthTrackTests.xctest"
+               BlueprintName = "GrowthTrackTests"
+               ReferencedContainer = "container:GrowthTrack.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
