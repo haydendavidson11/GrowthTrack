@@ -50,7 +50,7 @@
 		9777A02B2784BA2F003B1739 /* Color-Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Additions.swift"; sourceTree = "<group>"; };
 		978845B42784D06500A6C357 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		97BED14C275FAB5F00035929 /* GrowthTrack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GrowthTrack.entitlements; sourceTree = "<group>"; };
-		97BED14D275FAB7300035929 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		97BED14D275FAB7300035929 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97BED14F275FAB9200035929 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		97BED151275FB1FD00035929 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		97BED153275FB43700035929 /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
@@ -81,6 +81,99 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9732D57A27B2CBF5005B84F1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				97BED16727613B0000035929 /* Bundle-Decodable.swift */,
+				97BED15D2760FFDD00035929 /* Binding-OnChange.swift */,
+				9777A02B2784BA2F003B1739 /* Color-Additions.swift */,
+				9732D58327B2CF17005B84F1 /* CoreDataHelpers */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9732D57B27B2CC00005B84F1 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				97634F6E275E625B00F9D382 /* ContentView.swift */,
+				97BED14C275FAB5F00035929 /* GrowthTrack.entitlements */,
+				97634F7D275E67F600F9D382 /* DataController.swift */,
+				97634F7A275E65F800F9D382 /* Main.xcdatamodeld */,
+				97BED14D275FAB7300035929 /* Info.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		9732D57C27B2CC0F005B84F1 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				9755368F2799D6C6000F9E59 /* Localizable.stringsdict */,
+				978845B42784D06500A6C357 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		9732D57D27B2CC9A005B84F1 /* Activities */ = {
+			isa = PBXGroup;
+			children = (
+				9732D57E27B2CCAF005B84F1 /* Home */,
+				9732D57F27B2CCB6005B84F1 /* Projects */,
+				9732D58027B2CCBF005B84F1 /* Awards */,
+			);
+			path = Activities;
+			sourceTree = "<group>";
+		};
+		9732D57E27B2CCAF005B84F1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				97BED151275FB1FD00035929 /* HomeView.swift */,
+				97553691279B0A1F000F9E59 /* ItemListView.swift */,
+				97553693279B0B10000F9E59 /* ProjectSummaryView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9732D57F27B2CCB6005B84F1 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				97BED153275FB43700035929 /* ProjectsView.swift */,
+				97BED165276138FD00035929 /* SelectSomethingView.swift */,
+				97BED15F2761072C00035929 /* ProjectHeaderView.swift */,
+				97BED15B2760138A00035929 /* ItemRowView.swift */,
+				97BED16327610C6000035929 /* EditProjectView.swift */,
+				97BED15927600D5F00035929 /* EditItemView.swift */,
+			);
+			path = Projects;
+			sourceTree = "<group>";
+		};
+		9732D58027B2CCBF005B84F1 /* Awards */ = {
+			isa = PBXGroup;
+			children = (
+				97BED16D276164E700035929 /* AwardsView.swift */,
+				97BED16B276163EB00035929 /* Award.swift */,
+				97BED16927613B1C00035929 /* Awards.json */,
+			);
+			path = Awards;
+			sourceTree = "<group>";
+		};
+		9732D58127B2CD5A005B84F1 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				97634F70275E625B00F9D382 /* Assets.xcassets */,
+				97BED16127610B1500035929 /* Colors.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		9732D58327B2CF17005B84F1 /* CoreDataHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				97BED155275FD87100035929 /* Item-CoreDataHelpers.swift */,
+				97BED157275FDACD00035929 /* Project-CoreDateHelpers.swift */,
+			);
+			path = CoreDataHelpers;
+			sourceTree = "<group>";
+		};
 		97634F60275E625B00F9D382 = {
 			isa = PBXGroup;
 			children = (
@@ -101,34 +194,13 @@
 		97634F6B275E625B00F9D382 /* GrowthTrack */ = {
 			isa = PBXGroup;
 			children = (
-				97BED14D275FAB7300035929 /* Info.plist */,
-				97BED14C275FAB5F00035929 /* GrowthTrack.entitlements */,
 				97634F6C275E625B00F9D382 /* GrowthTrackApp.swift */,
-				97BED151275FB1FD00035929 /* HomeView.swift */,
-				97553693279B0B10000F9E59 /* ProjectSummaryView.swift */,
-				97553691279B0A1F000F9E59 /* ItemListView.swift */,
-				978845B42784D06500A6C357 /* Localizable.strings */,
-				9755368F2799D6C6000F9E59 /* Localizable.stringsdict */,
-				9777A02B2784BA2F003B1739 /* Color-Additions.swift */,
-				97BED153275FB43700035929 /* ProjectsView.swift */,
-				97BED16727613B0000035929 /* Bundle-Decodable.swift */,
-				97BED165276138FD00035929 /* SelectSomethingView.swift */,
-				97BED15D2760FFDD00035929 /* Binding-OnChange.swift */,
-				97BED15B2760138A00035929 /* ItemRowView.swift */,
-				97634F6E275E625B00F9D382 /* ContentView.swift */,
-				97BED15927600D5F00035929 /* EditItemView.swift */,
-				97BED15F2761072C00035929 /* ProjectHeaderView.swift */,
-				97BED16327610C6000035929 /* EditProjectView.swift */,
-				97BED155275FD87100035929 /* Item-CoreDataHelpers.swift */,
-				97BED157275FDACD00035929 /* Project-CoreDateHelpers.swift */,
-				97634F7D275E67F600F9D382 /* DataController.swift */,
-				97BED16927613B1C00035929 /* Awards.json */,
-				97BED16B276163EB00035929 /* Award.swift */,
-				97BED16D276164E700035929 /* AwardsView.swift */,
-				97634F70275E625B00F9D382 /* Assets.xcassets */,
-				97BED16127610B1500035929 /* Colors.xcassets */,
-				97634F7A275E65F800F9D382 /* Main.xcdatamodeld */,
+				9732D57D27B2CC9A005B84F1 /* Activities */,
+				9732D57A27B2CBF5005B84F1 /* Extensions */,
+				9732D57C27B2CC0F005B84F1 /* Localization */,
+				9732D57B27B2CC00005B84F1 /* Configuration */,
 				97634F72275E625B00F9D382 /* Preview Content */,
+				9732D58127B2CD5A005B84F1 /* Assets */,
 			);
 			path = GrowthTrack;
 			sourceTree = "<group>";
@@ -399,7 +471,7 @@
 				DEVELOPMENT_TEAM = 2P3NHST8R6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GrowthTrack/Info.plist;
+				INFOPLIST_FILE = GrowthTrack/Configuration/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -430,7 +502,7 @@
 				DEVELOPMENT_TEAM = 2P3NHST8R6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GrowthTrack/Info.plist;
+				INFOPLIST_FILE = GrowthTrack/Configuration/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
