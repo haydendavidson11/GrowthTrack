@@ -8,6 +8,7 @@
 import Foundation
 
 extension Project {
+
     static let colors = [
         "Pink",
         "Purple",
