@@ -11,13 +11,13 @@ struct AwardsView: View {
     @EnvironmentObject var dataController: DataController
     @State private var selectedAward = Award.example
     @State private var showingAwardDetails = false
+
     static let tag: String? = "Awards"
-    
-    
+
     var columns: [GridItem] {
         [GridItem(.adaptive(minimum: 100, maximum: 100))]
     }
-    
+
     var body: some View {
         NavigationView {
             ScrollView {
@@ -32,7 +32,7 @@ struct AwardsView: View {
                                 .scaledToFit()
                                 .padding()
                                 .frame(width: 100, height: 100)
-                                .foregroundColor(dataController.hasEarned(award: award) ? Color(award.color) : Color.secondary.opacity(0.5))
+                                .foregroundColor(awardColor(award))
                         }
                     }
                 }
@@ -41,11 +41,19 @@ struct AwardsView: View {
         }
         .alert(isPresented: $showingAwardDetails) {
             if dataController.hasEarned(award: selectedAward) {
-                return Alert(title: Text("Unlocked: \(selectedAward.name)"), message: Text("\(selectedAward.description)"), dismissButton: .default(Text("OK")))
+                return Alert(title: Text("Unlocked: \(selectedAward.name)"),
+                             message: Text("\(selectedAward.description)"),
+                             dismissButton: .default(Text("OK")))
             } else {
-                return Alert(title: Text("Locked"), message: Text("\(selectedAward.description)"), dismissButton: .default(Text("OK")))
+                return Alert(title: Text("Locked"),
+                             message: Text("\(selectedAward.description)"),
+                             dismissButton: .default(Text("OK")))
             }
         }
+    }
+
+    func awardColor(_ award: Award) -> Color {
+        dataController.hasEarned(award: award) ? Color(award.color) : Color.secondary.opacity(0.5)
     }
 }
 

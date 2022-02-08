@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct Award: Decodable, Identifiable {
     var id: String { name }
     let name: String
