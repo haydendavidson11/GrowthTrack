@@ -55,7 +55,7 @@ class GrowthTrackUITests: XCTestCase {
         app.buttons["New Project"].tap()
         app.textFields["New Project"].tap()
 
-        // BUG - Seems to be a bug here. If I don't have two 'space' taps then there is no space between 'New Project' and '2'.
+        // BUG - Seems to be a bug here. If I don't have two space taps then there is no space between New Project and 2
         app.keys["space"].tap()
         app.keys["space"].tap()
         //
@@ -74,7 +74,7 @@ class GrowthTrackUITests: XCTestCase {
         app.buttons["New Item"].tap()
         app.textFields["New Item"].tap()
 
-        // BUG - Seems to be a bug here. If I don't have two 'space' taps then there is no space between 'New Item' and '2'.
+        // BUG - Seems to be a bug here. If I don't have two space taps then there is no space between New Item and 2.
         app.keys["space"].tap()
         app.keys["space"].tap()
         //
