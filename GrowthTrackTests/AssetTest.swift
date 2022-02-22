@@ -9,6 +9,7 @@ import XCTest
 @testable import GrowthTrack
 
 class AssetTest: XCTestCase {
+
     func testColorsExist() {
         for color in Project.colors {
             XCTAssertNotNil(UIColor(named: color), "Failed to load color '\(color)' from asset catalog")

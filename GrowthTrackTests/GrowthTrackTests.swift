@@ -8,7 +8,7 @@ import CoreData
 import XCTest
 @testable import GrowthTrack
 
-class GrowthTrackTests: XCTestCase {
+class BaseTestCase: XCTestCase {
 
     var dataController: DataController!
     var managedObjectContext: NSManagedObjectContext!

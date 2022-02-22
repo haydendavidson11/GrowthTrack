@@ -20,7 +20,7 @@ class DataController: ObservableObject {
     /// Defaults to permanent storage.
     /// - Parameter inMemory: Whether to store this data in temporary data or not.
     init(inMemory: Bool = false) {
-        container = NSPersistentCloudKitContainer(name: "Main")
+        container = NSPersistentCloudKitContainer(name: "Main", managedObjectModel: Self.model)
 
         // For testing and previewing purposes, we create a temporary,
         // in-memory database by writing to /dev/null so our data is
@@ -33,6 +33,13 @@ class DataController: ObservableObject {
             if let error = error {
                 fatalError("Fatal error loading store \(error.localizedDescription)")
             }
+
+            #if DEBUG
+            if CommandLine.arguments.contains("enable-testing") {
+                self.deleteAll()
+                UIView.setAnimationsEnabled(false)
+            }
+            #endif
         }
     }
 
@@ -46,6 +53,19 @@ class DataController: ObservableObject {
         }
 
         return dataController
+    }()
+
+    // Creates a single instance of our managed Object Model
+    // for use in both test cases, and proper runs of the application.
+    static let model: NSManagedObjectModel = {
+        guard let url = Bundle.main.url(forResource: "Main", withExtension: "momd") else {
+            fatalError("Failed to locate model file")
+        }
+
+        guard let managedObjectModel = NSManagedObjectModel(contentsOf: url) else {
+            fatalError("Failed to load model file.")
+        }
+        return managedObjectModel
     }()
 
     /// Creates example projects and items to make manual testing easier.
@@ -82,11 +102,13 @@ class DataController: ObservableObject {
         }
     }
 
+    /// Deletes the desired object from the Core Data context.
+    /// - Parameter object: The managed object to be deleted.
     func delete(_ object: NSManagedObject) {
         container.viewContext.delete(object)
     }
 
-    // Delete all project and items in the Context 
+    /// Deletes all projects and items from the Core Data context
     func deleteAll() {
         let fetchRequest1: NSFetchRequest<NSFetchRequestResult> = Item.fetchRequest()
         let batchDeleteRequest1 = NSBatchDeleteRequest(fetchRequest: fetchRequest1)
@@ -97,10 +119,15 @@ class DataController: ObservableObject {
         _ = try? container.viewContext.execute(batchDeleteRequest2)
     }
 
+    /// Count the number of ManagedObjects(T) in the given fetchRequest.
+    /// - Returns: the number of items counted for the given fetch Request.
     func count<T>(for fetchRequest: NSFetchRequest<T>) -> Int {
         (try? container.viewContext.count(for: fetchRequest)) ?? 0
     }
 
+    /// Validates the user has earned the given award.
+    /// - Parameter award: The award to be validated.
+    /// - Returns: Whether the award has been earned by the user or not.
     func hasEarned(award: Award) -> Bool {
         switch award.criterion {
         case "items":
