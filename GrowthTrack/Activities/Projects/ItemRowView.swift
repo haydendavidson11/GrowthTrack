@@ -17,7 +17,7 @@ struct ItemRowView: View {
                 Text(item.itemTitle)
             } icon: {
                 Image(systemName: viewModel.icon)
-                    .foregroundColor(viewModel.color.map { Color($0) ?? .clear })
+                    .foregroundColor(viewModel.color.map { Color($0) })
             }
         }
     }
